@@ -5,6 +5,7 @@
  */
 package testmaison.exercice;
 
+import testmaison.util.ListUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,48 +18,38 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author user1
+ * @author Anis BEN MOUSSA
  */
 public class PartitionListTest {
 
-    public PartitionListTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    @Before
-    public void setUp() {
-    }
-
-    @After
-    public void tearDown() {
-    }
-
+   
     /**
      * Test of partition method, of class PartitionList.
      */
     @Test
     public void testPartition() {
+        
+        //Création et découpage de la liste
         System.out.println("partition");
         List liste = new ArrayList<>();
         for (Integer i = 1; i < 8; i++) {
             liste.add(i);
         }
-
         int taille = 2;
-        PartitionList instance = new PartitionList();
+        
+        List result = ListUtil.partition(liste, taille);
+        
+        // assertion
         List expResult = new ArrayList();
-        List l=Arrays.asList({1,2});
+        List l= Arrays.asList(1,2);
+        List l1= Arrays.asList(3,4);
+        List l2= Arrays.asList(5,6);
+        List l3= Arrays.asList(7);
         expResult.add(l);
-        List result = instance.partition(liste, taille);
+        expResult.add(l1);
+        expResult.add(l2);
+        expResult.add(l3);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 

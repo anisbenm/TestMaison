@@ -1,0 +1,8 @@
+La fonction de découpage se trouve dans la classe ListUtil et s'appelle partition. 
+Elle est statique, et découpe la liste passée en param en sous listes de maxi la taille passée en param.
+
+Pour l'utiliser, ajoutez le jar partition.jar, situé dans le dossier "dist", à vos dépendances. Ensuite, dans votre code:
+
+ ListUtil.partition(LA LISTE A DECOUPER, LA TAILLE MAX DE CHAQUE SOUS-LISTE);
+
+
