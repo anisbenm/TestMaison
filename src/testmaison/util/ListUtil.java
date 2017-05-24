@@ -22,6 +22,8 @@ public class ListUtil {
      * @param taille
      * @return
      */
+    
+    
     public static List partition(List liste, int taille) {
 
         List<List> listeRes = new ArrayList<>();
