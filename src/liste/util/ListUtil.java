@@ -17,10 +17,11 @@ public class ListUtil {
     /**
      * Découpe la liste passée en param en sous listes de maxi la taille passée
      * en param.
-     *
+     * 
      * @param liste
      * @param taille
-     * @return listeRes
+     * @return listeRes : liste des sous listes, la liste passee en parametre si la taille est incorrecte ou la liste est non initialisee
+     * 
      */
     public static List partition(List liste, int taille) {
         int size = liste.size();
