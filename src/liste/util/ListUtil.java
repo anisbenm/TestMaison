@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testmaison.util;
+package liste.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +20,15 @@ public class ListUtil {
      *
      * @param liste
      * @param taille
-     * @return
+     * @return listeRes
      */
-    
-    
     public static List partition(List liste, int taille) {
-
+        int size = liste.size();
+        if (liste == null || taille <= 0 || taille >= size) {
+            return liste;
+        }
         List<List> listeRes = new ArrayList<>();
-        int nbSousListes = liste.size() / taille;//sous listes complètes
+        int nbSousListes = size / taille;//sous listes complètes
         int index = 0;
         List sousListe;
         for (int i = 0; i < nbSousListes; i++) {
@@ -40,7 +41,7 @@ public class ListUtil {
         }
 
         // ajout de la dernière sous liste si nécessaire 
-        if (liste.size() % taille != 0) {
+        if (index < size) {
             sousListe = new ArrayList();
             for (; index < liste.size(); index++) {
                 sousListe.add(liste.get(index));
